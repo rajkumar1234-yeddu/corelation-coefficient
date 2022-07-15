@@ -1,0 +1,16 @@
+import pandas as pd
+import numpy as np
+x=[3,7,4,2,0,4,1,2]
+y=[11,18,9,4,7,6,3,8]
+x1=np.array(x)
+y1=np.array(y)
+sum_xy1=sum(x1*y1)
+sum_x22=sum(x1**2)
+sum_y22=sum(y1**2)
+meanx=sum(x)/len(x)
+meany=sum(y)/len(x)
+cov=(sum_xy1/len(x))-meanx*meany
+sigx=math.sqrt((sum_x22/len(x))-meanx**2)
+sigy=math.sqrt((sum_y22/len(x))-meany**2)
+print("corelation coefficient is ",cov/(sigx*sigy))
+
